@@ -4,17 +4,21 @@ namespace App\Controller;
 
 use App\Util\NumberGenerator;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * Class LuckyController
  * @package App\Controller
+ * 
  */
 class LuckyController extends AbstractController
 {
     /**
      * @param NumberGenerator $generator
-     *
+     * 
+     * @Route("/", name="lucky", methods={"GET","POST"})
+     * 
      * @return Response
      */
     public function number(NumberGenerator $generator)
